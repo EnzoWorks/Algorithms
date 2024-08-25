@@ -1,3 +1,0 @@
-﻿  SotrBubble.cpp
-C:\Users\adi02\source\repos\SotrBubble\SotrBubble\SotrBubble.cpp(8,12): warning C4267: "inicjowanie": konwersja z "size_t" do "int", możliwa utrata danych
-  SotrBubble.vcxproj -> C:\Users\adi02\source\repos\SotrBubble\x64\Debug\SotrBubble.exe
