@@ -91,11 +91,9 @@ def Backpack():
         product_weight = expensive['Waga'].values[0]
 
         if size >= product_weight and quantity_of > 0:
-            # Dodaj pełny przedmiot do plecaka
             df_backpack = pd.concat([df_backpack, expensive.drop(columns=["Dostępność"])], ignore_index=True)
             size -= product_weight
             
-            # Zmniejsz dostępność o 1
             df.loc[df['Nazwa'] == expensive['Nazwa'].values[0], 'Dostępność'] -= 1
             continue
             
@@ -106,7 +104,6 @@ def Backpack():
             partial_weight = size
             size = 0
             
-            # Tworzenie nowego DataFrame dla częściowego przedmiotu
             partial_item = pd.DataFrame({
                 'Nazwa': [expensive['Nazwa'].values[0]],
                 'Waga': [partial_weight],
@@ -121,7 +118,6 @@ def Backpack():
             break  # Przerwij pętlę po dodaniu częściowego przedmiotu
 
 
-        # Sprawdzenie czy są jeszcze dostępne przedmioty
         if df.loc[df['Nazwa'] == expensive['Nazwa'].values[0], 'Dostępność'].values[0] <= 0:
             df.drop(df[df['Nazwa'] == expensive['Nazwa'].values[0]].index, inplace=True) 
 
