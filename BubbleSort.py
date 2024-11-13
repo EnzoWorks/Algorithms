@@ -24,14 +24,26 @@ def InsertNumbers():
             iterator -= 1
             continue
 
+
     print(f"You've added {iterator} items")
     print(list_of_numbers)
-
-    return iterator, list_of_numbers
-
-def QuickSort(numbers):   
-    while True: 
     
+    
+    #Sort the numbers in the array comparing two elements
+    def BubbleSort(to_sort):
+        for first in range(iterator-1):
+            for second in range(iterator-first-1):
+                if float(to_sort[second]) > float(to_sort[second+1]):
+                    to_sort[second], to_sort[second+1] = to_sort[second+1], to_sort[second]
+                else:
+                    continue
+
+        print(list_of_numbers)
+
+    BubbleSort(list_of_numbers)
+
 
 def main():
-    
+    InsertNumbers()
+
+main()
