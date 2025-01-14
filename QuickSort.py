@@ -45,9 +45,9 @@ def main():
     list_of_numbers = InsertNumbers()
     if list_of_numbers:
         sorted_numbers = QuickSort(list_of_numbers)
-        print(f"Posortowane liczby:  {sorted_numbers}")
+        print(f"Sorted array:  {sorted_numbers}")
     else:
-        print("Brak liczb do posortowania.")
+        print("Theres nothing to sort.")
 
 
 main()
